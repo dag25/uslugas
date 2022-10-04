@@ -1,0 +1,67 @@
+.service {
+	border-radius: 8px;
+	background-color: #fff;
+	padding: 24px;
+	display: grid;
+	grid-template-areas:
+		'avatar present price'
+		'. . review';
+	grid-template-columns: 50px 1fr max-content;
+	gap: 20px 24px;
+
+	// .service__avatar
+
+	&__avatar {
+		grid-area: avatar;
+	}
+
+	// .service__present
+
+	&__present {
+		grid-area: present;
+	}
+
+	// .service__title
+
+	&__title {
+		margin-bottom: 10px;
+		font-size: 24px;
+	}
+
+	// .service__name
+
+	&__name {
+		font-weight: 300;
+	}
+
+	// .service__price
+
+	&__price {
+		grid-area: price;
+		font-size: 24px;
+		text-align: right;
+	}
+
+	// .service__review
+
+	&__review {
+		grid-area: review;
+		display: flex;
+		gap: 16px;
+	}
+
+	// .service__stars
+
+	&__stars {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+	}
+
+	// .service__count-review
+
+	&__count-review {
+		background: url('img/chatCircleText.svg') left/14px no-repeat;
+		padding: 18px;
+	}
+}

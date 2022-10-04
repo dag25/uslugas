@@ -1,0 +1,35 @@
+.footer {
+	//.footer__container
+
+	&__container {
+		display: grid;
+		grid-template-areas:
+			'logo contacts'
+			'copyright contacts ';
+		grid-template-columns: 180px 1fr;
+		gap: 42px;
+	}
+
+	// .footer__logo
+
+	&__logo {
+		grid-area: logo;
+	}
+
+	// .footer__copyright
+
+	&__copyright {
+		grid-area: copyright;
+	}
+
+	// .footer__contacts
+
+	&__contacts {
+		grid-area: contacts;
+		align-self: flex-end;
+		justify-self: end;
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+	}
+}

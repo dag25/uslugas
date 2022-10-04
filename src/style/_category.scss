@@ -1,0 +1,75 @@
+.category {
+	// .category__title
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 24px;
+	}
+
+	// .category__item
+
+	&__item {
+		margin-bottom: 10px;
+	}
+
+	// .category__btn
+
+	&__btn {
+		font-weight: 300;
+		padding-left: 30px;
+		background-position: left;
+		background-size: 18px;
+		background-repeat: no-repeat;
+		text-align: left;
+
+		// .category__btn_photographer
+
+		&_photographer {
+			background-image: url('img/photographer.svg');
+		}
+
+		// .category__btn_makeup
+
+		&_makeup {
+			background-image: url('img/makeup.svg');
+		}
+
+		// .category__btn_masseur
+
+		&_masseur {
+			background-image: url('img/masseur.svg');
+		}
+
+		// .category__btn_handyman
+
+		&_handyman {
+			background-image: url('img/handyman.svg');
+		}
+
+		// .category__btn_cosmetologist
+
+		&_cosmetologist {
+			background-image: url('img/cosmetologist.svg');
+		}
+
+		// .category__btn_electrician
+
+		&_electrician {
+			background-image: url('img/electrician.svg');
+		}
+
+		// .category__btn_manicurist
+
+		&_manicurist {
+			background-image: url('img/manicurist.svg');
+		}
+
+		// .category__btn_plumber
+
+		&_plumber {
+			background-image: url('img/plumber.svg');
+		}
+	}
+}
