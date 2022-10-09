@@ -1,154 +1,66 @@
 .modal {
+	position: fixed;
+	inset: 0;
+	padding: 40px;
 	display: none;
+	background-color: rgba(#000000, 0.6);
+	overflow-y: auto;
+	cursor: pointer;
 
-	// .modal__service
+	// .modal__title
 
-	&__service {
+	&__title {
+		margin-bottom: 24px;
+		font-weight: 400;
+		font-size: 24px;
+		text-align: center;
+	}
+
+	// .modal_person
+
+	&_person {
+		display: flex;
 	}
 
 	// .modal__body
 
 	&__body {
+		position: relative;
+		margin: auto;
+		padding: 24px 20px 48px;
+		border-radius: 12px;
+		max-width: 768px;
+		width: 100%;
+		background-color: #f2f5fc;
+		cursor: default;
+	}
+
+	// .modal__container
+
+	&__container {
+		margin: 0 auto;
+		max-width: 632px;
 	}
 
 	// .modal__close
 
 	&__close {
-	}
-}
-.service {
-	// .service__avatar
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		transform: translate(50%, -50%);
+		color: #7b7b7b;
+		transition: color 0.24s ease-in-out;
 
-	&__avatar {
-	}
-
-	// .service__present
-
-	&__present {
-	}
-
-	// .service__title
-
-	&__title {
-	}
-
-	// .service__name
-
-	&__name {
-	}
-
-	// .service__price
-
-	&__price {
-	}
-
-	// .service__contacts
-
-	&__contacts {
-	}
-
-	// .service__link
-
-	&__link {
-	}
-
-	// .service__review
-
-	&__review {
-	}
-
-	// .service__stars
-
-	&__stars {
-	}
-
-	// .service__count-review
-
-	&__count-review {
-	}
-}
-.stars {
-	// .stars__item
-
-	&__item {
-	}
-}
-.about {
-	// .about__title
-
-	&__title {
-	}
-
-	// .about__text
-
-	&__text {
-	}
-}
-.review {
-	// .review__title
-
-	&__title {
-	}
-
-	// .review__list
-
-	&__list {
-	}
-
-	// .review__item
-
-	&__item {
-	}
-
-	// .review__item-title
-
-	&__item-title {
-	}
-
-	// .review__text
-
-	&__text {
-	}
-
-	// .review__open
-
-	&__open {
-	}
-}
-.form {
-	// .form_add-review
-
-	&_add-review {
-	}
-
-	// .form__label
-
-	&__label {
-	}
-
-	// .form__text
-
-	&__text {
-	}
-
-	// .form__input
-
-	&__input {
-	}
-
-	// .form__textarea
-
-	&__textarea {
-	}
-
-	// .form__submit
-
-	&__submit {
-	}
-}
-.rating {
-	// .rating__star
-
-	&__star {
+		&:hover {
+			color: #000;
+		}
 	}
 }

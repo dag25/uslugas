@@ -1,0 +1,149 @@
+.form {
+	// .form__fieldset
+
+	&__fieldset {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px 12px;
+
+		&_user,
+		&_service {
+			margin-bottom: 46px;
+		}
+
+		&_password {
+			margin-bottom: 36px;
+		}
+	}
+
+	// .form__label
+
+	&__label {
+		flex: 1 1 310px;
+	}
+
+	// .form__text
+
+	&__text {
+		display: block;
+		margin-bottom: 4px;
+		font-weight: 300;
+	}
+
+	// .form__input
+
+	&__input {
+		padding: 10px 14px;
+		width: 100%;
+		height: 46px;
+		background-color: #ffffff;
+		border-radius: 8px;
+		border: none;
+		font-weight: 300;
+	}
+
+	// .form__select
+
+	&__select {
+		padding: 10px 14px;
+		width: 100%;
+		height: 46px;
+		background-color: #ffffff;
+		border-radius: 8px;
+		border: none;
+
+		// .form__select_price
+		&_price {
+			width: 105px;
+		}
+	}
+
+	// .form__password
+
+	&__password {
+		position: relative;
+	}
+
+	// .form__password-eye
+
+	&__password-eye {
+		position: absolute;
+		top: 50%;
+		right: 14px;
+		display: block;
+		width: 24px;
+		height: 24px;
+		transform: translateY(-50%);
+		background-image: url('img/eye-hide.svg');
+		cursor: pointer;
+
+		&_show {
+			background-image: url('img/eye-show.svg');
+		}
+	}
+
+	// .form__wrapper-price
+
+	&__wrapper-price {
+		display: flex;
+		gap: 5px;
+	}
+
+	// .form__textarea
+
+	&__textarea {
+		padding: 10px 14px;
+		width: 100%;
+		min-height: 80px;
+		background-color: #ffffff;
+		border-radius: 8px;
+		border: none;
+		font-weight: 300;
+	}
+
+	// .form__bottom
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	// .form__submit
+
+	&__submit {
+		display: block;
+		padding: 10px 20px;
+		background-color: #ffd600;
+		border-radius: 4px;
+		font-weight: 400;
+		font-size: 16px;
+
+		&_sign-up {
+			align-self: flex-end;
+		}
+
+		&_sign-in {
+			margin-left: auto;
+		}
+	}
+
+	// .form__wrapper-btn
+
+	&__wrapper-btn {
+		display: flex;
+		justify-content: space-between;
+		min-height: 114px;
+	}
+
+	&_add-review {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+}
+
+.rating {
+	margin-right: 24px;
+	transform: translateY(10%);
+}

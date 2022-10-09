@@ -1,0 +1,56 @@
+.avatar {
+	// .avatar__label
+
+	&__label {
+		display: flex;
+		gap: 11px;
+		cursor: pointer;
+		transform: color 0.24s ease-in-out;
+
+		&:hover {
+			color: #096601;
+
+			.avatar__input-text {
+				background-color: #daffd7;
+				color: $text;
+			}
+		}
+	}
+
+	// .avatar__text
+
+	&__text {
+		font-weight: 300;
+	}
+
+	// .avatar__input-wrapper
+
+	&__input-wrapper {
+		position: relative;
+	}
+
+	// .avatar__input
+
+	&__input {
+		position: absolute;
+		transform: scale(0);
+
+		&:focus + .avatar__input-text {
+			background-color: #daffd7;
+			border: 1px solid #096601;
+		}
+	}
+
+	// .avatar__input-text
+
+	&__input-text {
+		padding: 10px 20px;
+		border: 1px solid #12df00;
+		border-radius: 4px;
+	}
+
+	// .avatar__result
+
+	&__result {
+	}
+}

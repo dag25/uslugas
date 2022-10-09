@@ -5,9 +5,15 @@
 	display: grid;
 	grid-template-areas:
 		'avatar present price'
-		'. . review';
+		'contacts contacts review';
 	grid-template-columns: 50px 1fr max-content;
 	gap: 20px 24px;
+
+	// .service_person
+
+	&_person {
+		gap: 40px 14px;
+	}
 
 	// .service__avatar
 
@@ -26,6 +32,7 @@
 	&__title {
 		margin-bottom: 10px;
 		font-size: 24px;
+		font-weight: 400;
 	}
 
 	// .service__name
@@ -42,26 +49,57 @@
 		text-align: right;
 	}
 
+	// .service__contacts
+
+	&__contacts {
+		grid-column: 1 / 3;
+		align-self: end;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	// .service__link
+
+	&__link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 9px;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+
+		&_phone::before {
+			background-image: url('img/phone.svg');
+		}
+
+		&_email::before {
+			background-image: url('img/email.svg');
+		}
+	}
+
 	// .service__review
 
 	&__review {
 		grid-area: review;
 		display: flex;
 		gap: 16px;
-	}
-
-	// .service__stars
-
-	&__stars {
-		display: flex;
-		align-items: center;
-		gap: 2px;
+		justify-content: flex-end;
+		align-items: flex-end;
 	}
 
 	// .service__count-review
 
 	&__count-review {
 		background: url('img/chatCircleText.svg') left/14px no-repeat;
-		padding: 18px;
+		padding-left: 18px;
 	}
 }

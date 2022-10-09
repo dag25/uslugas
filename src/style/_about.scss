@@ -1,0 +1,16 @@
+.about {
+	// .about__title
+
+	&__title {
+		margin-bottom: 16px;
+		font-weight: 400;
+		font-size: 24px;
+	}
+
+	// .about__text
+
+	&__text {
+		font-weight: 300;
+		line-height: 1.4;
+	}
+}
