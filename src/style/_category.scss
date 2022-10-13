@@ -1,11 +1,33 @@
 .category {
+	position: relative;
+
 	// .category__title
 
 	&__title {
+		position: relative;
+		z-index: 5;
 		display: flex;
 		align-items: center;
 		gap: 10px;
-		margin-bottom: 24px;
+		width: 180px;
+	}
+
+	// .category__list
+
+	&__list {
+		padding-top: 24px;
+
+		@include tablet {
+			position: absolute;
+			top: -16px;
+			left: -16px;
+			z-index: 3;
+			display: none;
+			padding: 60px 12px 16px 16px;
+			background: #ffffff;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+			border-radius: 12px;
+		}
 	}
 
 	// .category__item

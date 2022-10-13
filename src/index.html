@@ -77,42 +77,42 @@
           </button>
           <ul class="category__list">
             <li class="category__item">
-              <button class="category__btn  category__btn_photographer">
+              <button class="category__btn  category__btn_photographer" data-value="photographer">
                 Фотограф
               </button>
             </li>
             <li class="category__item">
-              <button class="category__btn  category__btn_makeup">
+              <button class="category__btn  category__btn_makeup" data-value="makeup">
                 Визажист
               </button>
             </li>
             <li class="category__item">
-              <button class="category__btn  category__btn_masseur">
+              <button class="category__btn  category__btn_masseur" data-value="masseur">
                 Массажист
               </button>
             </li>
             <li class="category__item">
-              <button class="category__btn  category__btn_handyman">
+              <button class="category__btn  category__btn_handyman" data-value="handyman">
                 Муж на час
               </button>
             </li>
             <li class="category__item">
-              <button class="category__btn  category__btn_cosmetologist">
+              <button class="category__btn  category__btn_cosmetologist" data-value="cosmetologist">
                 Косметолог
               </button>
             </li>
             <li class="category__item">
-              <button class="category__btn  category__btn_electrician">
+              <button class="category__btn  category__btn_electrician" data-value="electrician">
                 Электрик
               </button>
             </li>
             <li class="category__item">
-              <button class="category__btn  category__btn_manicurist">
+              <button class="category__btn  category__btn_manicurist" data-value="manicurist">
                 Мастер маникюра
               </button>
             </li>
             <li class="category__item">
-              <button class="category__btn  category__btn_plumber">
+              <button class="category__btn  category__btn_plumber" data-value="plumber">
                 Сантехник
               </button>
             </li>
@@ -432,9 +432,6 @@
                 Максим!
               </p>
 
-              <button class="review__open  review__open_text">
-                Развернуть
-              </button>
             </li>
             <li class="review__item">
               <h4 class="review__item-title">
@@ -449,16 +446,13 @@
                 <img class="stars__item" src="img/star.svg" alt="">
               </div>
 
-              <p class="review__text  review__text_open">
+              <p class="review__text">
                 Попросила Максима сделать фотосессию на фоне достопримечательностей, так как была в отпуске в
                 Калининграде. Всё прошло
                 на позитиве, комфортно и приятно. Фото получились классные! Я очень довольна! Рекомендую! Спасибо,
                 Максим!
               </p>
 
-              <button class="review__open  review__open_text">
-                Свернуть
-              </button>
             </li>
           </ul>
 
@@ -481,12 +475,14 @@
 
             <label class="form__label  form__label_textarea">
               <span class="form__text">Комментарий</span>
-              <textarea class="form__textarea" name=""></textarea>
+              <span class="form__simple">
+                <textarea class="form__textarea" name=""></textarea>
+              </span>
             </label>
           </fieldset>
 
           <div class="form__bottom">
-            <div class="rating">
+            <div class="form__rating  rating">
               <svg class="rating__star" width="18" height="18" viewBox="0 0 18 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -545,7 +541,7 @@
       <h3 class="modal__title">
         Регистрация специалиста
       </h3>
-      <form class="form  form-sign-up">
+      <form class="form  form_sign-up">
 
         <fieldset class="form__fieldset  form__fieldset_user">
           <label class="form__label">
@@ -574,7 +570,7 @@
 
           <label class="form__label">
             <span class="form__text">Категория</span>
-            <select class="form__select" name="">
+            <select class="form__select  form__select_category" name="">
               <option class="form__option" value="">Выберите категорию</option>
               <option class="form__option" value="photographer">Фотограф</option>
               <option class="form__option" value="makeup">Визажист</option>
@@ -612,7 +608,7 @@
           <div class="form__label">
             <label class="form__text" for="password">Пароль</label>
             <div class="form__password">
-              <input class="form__input" id="password" type="password">
+              <input class="form__input  form__input_password" id="password" type="password">
               <button class="form__password-eye" type="button" aria-label="Показать пароль">
               </button>
             </div>
@@ -621,7 +617,7 @@
           <div class="form__label">
             <label class="form__text" for="password-repeat">Повторите пароль</label>
             <div class="form__password">
-              <input class="form__input" id="password-repeat" type="password">
+              <input class="form__input  form__input_password" id="password-repeat" type="password">
               <button class="form__password-eye" aria-label="Показать пароль">
               </button>
             </div>
@@ -682,7 +678,7 @@
           <div class="form__label">
             <label class="form__text" for="passwordIn">Пароль</label>
             <div class="form__password">
-              <input class="form__input" id="passwordIn" type="password">
+              <input class="form__input  form__input_password" id="passwordIn" type="password">
               <button class="form__password-eye" type="button" aria-label="Показать пароль">
               </button>
             </div>

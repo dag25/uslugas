@@ -8,6 +8,16 @@
 		'contacts contacts review';
 	grid-template-columns: 50px 1fr max-content;
 	gap: 20px 24px;
+	cursor: pointer;
+
+	@include mobile {
+		grid-template-areas:
+			'avatar . price'
+			'present present review'
+			'contacts contacts contacts';
+		padding: 16px;
+		gap: 8px;
+	}
 
 	// .service_person
 
@@ -33,12 +43,21 @@
 		margin-bottom: 10px;
 		font-size: 24px;
 		font-weight: 400;
+
+		@include mobile {
+			margin-bottom: 17px;
+			font-size: 18px;
+		}
 	}
 
 	// .service__name
 
 	&__name {
 		font-weight: 300;
+
+		@include mobile {
+			font-size: 14px;
+		}
 	}
 
 	// .service__price
@@ -47,16 +66,27 @@
 		grid-area: price;
 		font-size: 24px;
 		text-align: right;
+
+		@include mobile {
+			font-size: 18px;
+			padding-right: 8px;
+			padding-top: 8px;
+		}
 	}
 
 	// .service__contacts
 
 	&__contacts {
-		grid-column: 1 / 3;
+		grid-area: contacts;
 		align-self: end;
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+		font-weight: 300;
+
+		@include mobile {
+			font-size: 14px;
+		}
 	}
 
 	// .service__link
@@ -94,6 +124,10 @@
 		gap: 16px;
 		justify-content: flex-end;
 		align-items: flex-end;
+
+		@include mobile {
+			gap: 8px;
+		}
 	}
 
 	// .service__count-review
@@ -101,5 +135,15 @@
 	&__count-review {
 		background: url('img/chatCircleText.svg') left/14px no-repeat;
 		padding-left: 18px;
+
+		@include mobile {
+			font-size: 14px;
+		}
+	}
+
+	// .service__stars
+
+	&__stars {
+		line-height: 0;
 	}
 }

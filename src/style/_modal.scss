@@ -1,11 +1,20 @@
 .modal {
 	position: fixed;
 	inset: 0;
+	z-index: 999;
 	padding: 40px;
 	display: none;
 	background-color: rgba(#000000, 0.6);
 	overflow-y: auto;
 	cursor: pointer;
+
+	@include tablet {
+		padding: 20px;
+	}
+
+	@include mini {
+		padding: 0;
+	}
 
 	// .modal__title
 
@@ -14,12 +23,10 @@
 		font-weight: 400;
 		font-size: 24px;
 		text-align: center;
-	}
 
-	// .modal_person
-
-	&_person {
-		display: flex;
+		@include mobile {
+			font-size: 18px;
+		}
 	}
 
 	// .modal__body
@@ -48,6 +55,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+		z-index: 10;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -61,6 +69,11 @@
 
 		&:hover {
 			color: #000;
+		}
+
+		@include mini {
+			transform: none;
+			box-shadow: 0 0 10px 10px #ccc;
 		}
 	}
 }
