@@ -45,6 +45,15 @@
 		background-size: 18px;
 		background-repeat: no-repeat;
 		text-align: left;
+		transition: color 0.2s ease-in-out;
+
+		&:hover {
+			color: #e5c207;
+		}
+
+		&:active {
+			color: #ffd600;
+		}
 
 		// .category__btn_photographer
 

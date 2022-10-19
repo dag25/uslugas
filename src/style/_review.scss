@@ -35,6 +35,18 @@
 		min-height: 95px;
 		background-color: #fff;
 		border-radius: 8px;
+
+		&:nth-child(n + 4) {
+			display: none;
+		}
+	}
+
+	// .review_show-all
+
+	&_show-all {
+		.review__item {
+			display: grid;
+		}
 	}
 
 	// .review__item-title

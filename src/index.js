@@ -4,6 +4,17 @@ import { modalController } from './modules/modalController';
 import { selectController } from './modules/selectController';
 import { showPassword } from './modules/showPassword';
 import { choicesController } from './modules/choicesController';
+import { getCategory } from './modules/getCategory';
+import { renderList } from './modules/renderList';
+import { searchControl } from './modules/searchControl';
+
+import { avatarController } from './modules/avatarController';
+
+import { ratingController } from './modules/ratingController';
+
+import { getData } from './modules/getData';
+import { API_URL } from './modules/const';
+// import { renderModal } from './modules/renderModal';
 
 const init = () => {
 	modalController({
@@ -29,8 +40,12 @@ const init = () => {
 			);
 
 			const comments = document.querySelectorAll('.review__text');
+
 			comments.forEach(comment => {
-				if (comment.scrollHeight > 38) {
+				if (
+					comment.scrollHeight > 38 &&
+					!comment.nextElementSibling?.classList.contains('review__open')
+				) {
 					const button = document.createElement('button');
 					button.classList.add('review__open');
 					button.textContent = 'Развернуть';
@@ -58,6 +73,15 @@ const init = () => {
 
 	showPassword();
 	choicesController();
+	const crp = avatarController({
+		inputFile: '.avatar__input',
+		uploadResult: '.avatar__result',
+	});
+
+	getCategory();
+	renderList();
+	searchControl();
+	ratingController();
 };
 
 init();

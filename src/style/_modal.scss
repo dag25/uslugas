@@ -40,6 +40,11 @@
 		width: 100%;
 		background-color: #f2f5fc;
 		cursor: default;
+
+		@include mini {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 
 	// .modal__container
