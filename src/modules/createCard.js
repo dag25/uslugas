@@ -1,6 +1,5 @@
-import { API_URL } from './const';
+import { API_URL, directions } from './const';
 import { store } from './store';
-import { directions } from './const';
 import { createStars } from './createStars';
 
 export const createCard = item => {
@@ -8,13 +7,14 @@ export const createCard = item => {
 
 	const serviceItem = document.createElement('li');
 	serviceItem.classList.add('services__item');
+
 	const service = document.createElement('article');
 	service.classList.add('service');
 	service.dataset.id = id;
 	serviceItem.append(service);
 
-	const serviceAvatar = new Image();
-	serviceAvatar.classList.add('services__avatar');
+	const serviceAvatar = new Image(50, 50);
+	serviceAvatar.classList.add('service__avatar');
 	serviceAvatar.src = `${API_URL}/${avatar}`;
 	serviceAvatar.alt = `${category} ${surname} ${name}`;
 
@@ -24,6 +24,7 @@ export const createCard = item => {
 	const serviceTitle = document.createElement('h3');
 	serviceTitle.classList.add('service__title');
 	serviceTitle.textContent = store.category.find(item => item.title === category).rus;
+	console.dir();
 
 	const serviceName = document.createElement('p');
 	serviceName.classList.add('service__name');

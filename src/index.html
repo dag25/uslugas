@@ -120,7 +120,7 @@
         </div>
 
         <ul class="services__list">
-          <li class="services__item">
+          <!-- <li class="services__item">
             <article class="service">
               <img class="service__avatar" src="img/ivan.png" alt="аватар Иван">
               <div class="service__present">
@@ -287,7 +287,7 @@
                 </p>
               </div>
             </article>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -462,7 +462,7 @@
         </div>
 
         <form class="person__form  form  form_add-review">
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset  form__fieldset_add-review">
             <label class="form__label  form__label_name">
               <span class="form__text">Имя</span>
               <input class="form__input" type="text">
@@ -548,22 +548,22 @@
         <fieldset class="form__fieldset  form__fieldset_user">
           <label class="form__label">
             <span class="form__text">Имя</span>
-            <input class="form__input" type="text">
+            <input class="form__input" type="text" name="name">
           </label>
 
           <label class="form__label">
             <span class="form__text">Фамилия</span>
-            <input class="form__input" type="text">
+            <input class="form__input" type="text" name="surname">
           </label>
 
           <label class="form__label">
             <span class="form__text">Телефон</span>
-            <input class="form__input" type="text">
+            <input class="form__input" type="text" name="phone">
           </label>
 
           <label class="form__label">
             <span class="form__text">E-mail</span>
-            <input class="form__input" type="email">
+            <input class="form__input" type="email" name="email">
           </label>
 
         </fieldset>
@@ -572,7 +572,7 @@
 
           <label class="form__label">
             <span class="form__text">Категория</span>
-            <select class="form__select  form__select_category" name="">
+            <select class="form__select  form__select_category" name="category">
               <option class="form__option" value="">Выберите категорию</option>
               <option class="form__option" value="photographer">Фотограф</option>
               <option class="form__option" value="makeup">Визажист</option>
@@ -588,20 +588,20 @@
           <div class="form__label">
             <label class="form__text" for="price">Цена</label>
             <div class="form__wrapper-price">
-              <select class="form__select  form__select_price">
+              <select class="form__select  form__select_price" name="direction">
 
                 <option class="form__option" value="from">от</option>
                 <option class="form__option" value="exactly">равно</option>
                 <option class="form__option" value="up to">до</option>
 
               </select>
-              <input class="form__input" type="number" id="price">
+              <input class="form__input" type="number" id="price" name="price">
             </div>
           </div>
 
           <label class="form__label">
             <span class="form__text">Описание услуг</span>
-            <textarea class="form__textarea" name=""></textarea>
+            <textarea class="form__textarea" name="about"></textarea>
           </label>
 
         </fieldset>
@@ -610,7 +610,7 @@
           <div class="form__label">
             <label class="form__text" for="password">Пароль</label>
             <div class="form__password">
-              <input class="form__input  form__input_password" id="password" type="password">
+              <input class="form__input  form__input_password" id="password" type="password" name="password">
               <button class="form__password-eye" type="button" aria-label="Показать пароль">
               </button>
             </div>
@@ -619,7 +619,7 @@
           <div class="form__label">
             <label class="form__text" for="password-repeat">Повторите пароль</label>
             <div class="form__password">
-              <input class="form__input  form__input_password" id="password-repeat" type="password">
+              <input class="form__input  form__input_password" id="password-repeat" type="password" name="password">
               <button class="form__password-eye" aria-label="Показать пароль">
               </button>
             </div>
@@ -676,14 +676,14 @@
           <div class="form__label">
             <label class="form__text" for="email">E-mail</label>
             <span>
-              <input class="form__input" id="email" type="email">
+              <input class="form__input" id="email" type="email" name="email">
             </span>
           </div>
 
           <div class="form__label">
             <label class="form__text" for="passwordIn">Пароль</label>
             <div class="form__password">
-              <input class="form__input  form__input_password" id="passwordIn" type="password">
+              <input class="form__input  form__input_password" id="passwordIn" type="password" name="password">
               <button class="form__password-eye" type="button" aria-label="Показать пароль">
               </button>
             </div>
