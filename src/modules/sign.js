@@ -32,6 +32,7 @@ export const signInController = callback => {
 
 export const signUpController = callback => {
 	const form = document.querySelector('.form_sign-up');
+	form.action = `${API_URL}/api/service/signup`;
 	const crp = avatarController({
 		inputFile: '.avatar__input',
 		uploadResult: '.avatar__result',
@@ -53,15 +54,24 @@ export const signUpController = callback => {
 			size: 'viewport',
 		});
 
-		const dataResponse = await postData(`${API_URL}/api/service/signup`, data, 'post');
+		if (!data.avatar.includes('base64')) {
+			delete data.avatar;
+		}
+
+		const dataResponse = await postData(form.action, data, form.CDATA_SECTION_NODE.method);
 		if (dataResponse.error) {
 			console.log(dataResponse.error); //todo обработка ошибки
 			return;
 		}
 
-		const serviceList = document.querySelector('.services__list');
-		serviceList.append(createCard(dataResponse));
-		auth(dataResponse);
+		if (form.dataset.method !== 'PATCH') {
+			const serviceList = document.querySelector('.services__list');
+
+			serviceList.append(createCard(dataResponse));
+
+			auth(dataResponse);
+		}
+
 		form.reset();
 		crp.hideAvatar();
 		callback(e);

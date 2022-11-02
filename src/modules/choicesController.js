@@ -6,13 +6,19 @@ export const choicesController = () => {
 		shouldSort: false,
 		itemSelectText: '',
 	};
-	new Choices('.form__select_category', {
+
+	const selectCategory = document.querySelector('.form__select_category');
+
+	selectCategory._choices = new Choices(selectCategory, {
 		...options,
 		classNames: {
 			containerOuter: 'choices form__select_category',
 		},
 	});
-	new Choices('.form__select_price', {
+
+	const selectPrice = document.querySelector('.form__select_price');
+
+	selectPrice._choices = new Choices(selectPrice, {
 		...options,
 		classNames: {
 			containerOuter: 'choices form__select_price',
